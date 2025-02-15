@@ -18,11 +18,10 @@
             },
             "extensions": [  
                 "rust-lang.rust-analyzer",
-                "ms-azuretools.vscode-docker",
+                "ms-vscode.vscode-docker",
                 "github.vscode-github-actions",
-                "mmoussa.swift-json-formatter",
-                "rust-lang.rust",
-                "jscearcy.rust-doc-viewer",
+                "redhat.vscode-yaml",
+                "swellaby.vscode-rust-test-adapter",
                 "serayuzgur.crates",
                 "tamasfe.even-better-toml",
                 "vadimcn.vscode-lldb"
