@@ -1,6 +1,12 @@
 {  
     "name": "Rust Dev Container",  
-    "image": "mcr.microsoft.com/devcontainers/rust:latest",  
+    "image": "mcr.microsoft.com/devcontainers/rust:latest",
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils": {
+			"installZsh": true,
+			"configureZshAsDefaultShell": true
+		}
+    },  
     "mounts": [
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.gitconfig,target=/home/vscode/.gitconfig,type=bind,consistency=cached",
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
@@ -18,11 +24,10 @@
             },
             "extensions": [  
                 "rust-lang.rust-analyzer",
-                "ms-vscode.vscode-docker",
+                "ms-azuretools.vscode-docker",
                 "github.vscode-github-actions",
                 "redhat.vscode-yaml",
-                "swellaby.vscode-rust-test-adapter",
-                "serayuzgur.crates",
+                "fill-labs.dependi",
                 "tamasfe.even-better-toml",
                 "vadimcn.vscode-lldb"
             ]
