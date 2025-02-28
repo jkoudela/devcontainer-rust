@@ -22,6 +22,7 @@ This repository provides a template for setting up a Rust development environmen
 - `github.vscode-github-actions` - GitHub Actions support
 - `redhat.vscode-yaml` - YAML support with schema validation
 - `tamasfe.even-better-toml` - Enhanced TOML support
+- `fill-labs.dependi` - Dependency management utilities
 
 ## Getting Started
 
