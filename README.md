@@ -1,46 +1,64 @@
-# DevContainer for Rust
+# Rust DevContainer Template
 
 ## Overview
 
-The Dev Container Rust template provides a development environment based on the official `rust:latest` image with additional features and customizations. It includes:
+This repository provides a template for setting up a Rust development environment using VS Code Dev Containers. It's based on the official `rust:latest` Docker image and comes pre-configured with essential extensions and tools for Rust development.
 
-- Rust language support via `rust-analyzer` extension
-- Docker client integration (`ms-azuretools.vscode-docker`)
-- GitHub Actions support (`github.vscode-github-actions`)
-- YAML schema validation (`redhat.vscode-yaml`)
-- Dependency management utilities (`fill-labs.dependi` and `tamasfe.even-better-toml`)
-- LLDB debugger support (`vadimcn.vscode-lldb`)
+## Features
 
-## Features and Customizations
+- 🦀 Rust toolchain with cargo and rustup
+- 📝 Rust-Analyzer for intelligent code completion and analysis
+- 🐛 LLDB debugging support
+- 🐋 Docker integration
+- 🔧 Git configuration and SSH key forwarding
+- 💻 Zsh shell with custom configuration
+- 📦 TOML and dependency management support
 
-The Dev Container template has the following features and customizations:
+## Included VS Code Extensions
 
-- Mounts your local `.gitconfig` and `.ssh` directories into the container
-- Configures user environment variables (`GIT_AUTHOR_NAME`, `GIT_AUTHOR_EMAIL`, etc.) to match your local settings
-- Installs and configures Zsh as the default shell during container creation
+- `rust-analyzer` - Rust language support
+- `vadimcn.vscode-lldb` - Debugging support
+- `ms-azuretools.vscode-docker` - Docker integration
+- `github.vscode-github-actions` - GitHub Actions support
+- `redhat.vscode-yaml` - YAML support with schema validation
+- `tamasfe.even-better-toml` - Enhanced TOML support
 
-## Usage
+## Getting Started
 
-To use this Dev Container template, you can either:
+1. Ensure you have the following prerequisites installed:
+   - Visual Studio Code
+   - Docker Desktop
+   - VS Code Remote Development Extension Pack
 
-- Clone this repository and open it in Visual Studio Code with the Remote Development extension installed
-- Use the `vscode.devcontainer` URI scheme to open a new workspace with this template directly
+2. To use this template:
+   - Click "Use this template" on GitHub to create a new repository
+   - Clone your new repository
+   - Open in VS Code
+   - When prompted, click "Reopen in Container"
 
-Once you have opened the workspace, you should see the following extensions installed:
+## Container Configuration
 
-- Rust Analyzer (rustlang.rust-analyzer)
-- Docker Client Integration (ms-azuretools.vscode-docker)
-- GitHub Actions Support (github.vscode-github-actions)
-- YAML Schema Validation (redhat.vscode-yaml)
-- Dependency Management Utilities (fill-labs.dependi and tamasfe.even-better-toml)
-- LLDB Debugger Support (vadimcn.vscode-lldb)
+The development container is configured in the `.devcontainer` directory:
 
-## Configuration
+- `devcontainer.json` - Container configuration and features
+- Custom VS Code settings optimized for Rust development
+- Git and SSH configuration forwarding from host
 
-The Dev Container template configuration is stored in the `.devcontainer` directory, and includes:
+## Customization
 
-- `devcontainer.json`: defines container settings and features
-- `.gitconfig` and `.ssh` files: mounted into the container to enable authenticated Git operations
-- `settings.json`: custom settings for VS Code, including Rust Analyzer configuration
+To customize the development environment:
 
-To modify the template configuration, you can edit these files directly or use the VS Code Dev Containers extension to manage them.
+1. Modify `.devcontainer/devcontainer.json` to:
+   - Add or remove VS Code extensions
+   - Change container settings
+   - Add additional tools or dependencies
+
+2. Update VS Code settings in `.devcontainer/settings.json`
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This template is available under the MIT License. See the LICENSE file for more details.
